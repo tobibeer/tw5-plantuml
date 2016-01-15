@@ -1,6 +1,6 @@
 created: 20160114110928512
 creator: Tobias Beer
-modified: 20160114190136723
+modified: 20160115150932617
 modifier: Tobias Beer
 title: plantuml-Install
 type: text/vnd.tiddlywiki
@@ -11,5 +11,5 @@ type: text/vnd.tiddlywiki
 
 !! Version History
 
-; 0.5.0 __Beta__ / 2016-01-14
+; 0.5.0 / 2016-01-15
 : initial version
