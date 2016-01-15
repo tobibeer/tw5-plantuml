@@ -1,0 +1,10 @@
+created: 20160114110937381
+creator: Tobias Beer
+modified: 20160115135204059
+modifier: Tobias Beer
+tabs: Info WikiText Widget Examples Configure Styles Install
+tags: Plugins Filters Macros Widgets
+title: plantuml
+type: text/vnd.tiddlywiki
+
+<<plugin-docs plantuml>>

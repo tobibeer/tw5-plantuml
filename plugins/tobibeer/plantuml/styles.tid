@@ -1,0 +1,11 @@
+title: $:/plugins/tobibeer/plantuml/styles
+tags: $:/tags/Stylesheet
+
+.tc-plantuml-txt {
+	border:0;
+	width:100%;
+	height:400px;
+}
+.tc-plantuml-edit.tc-tiddlylink-external{
+    text-decoration:none;
+}

@@ -1,0 +1,12 @@
+title: $:/plugins/tobibeer/plantuml/readme
+
+The plugin $:/plugins/tobibeer/plantuml provides:
+
+; `[[plantuml[<uml>]]]`
+: a widget to render [[PlantUML|http://plantuml.org]] diagrams online as either image or text
+: allows the same attributes as <<x "Images in WikiText">>
+
+<br>
+
+; documentation / examples / demos...
+: http://tobibeer.github.io/tw5-plugins#plantuml

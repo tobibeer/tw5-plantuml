@@ -1,0 +1,5 @@
+title: $:/plugins/tobibeer/plantuml/
+
+defaults/edit: true
+lingo/edit: globally enable edit links for all output ("yes" or "true")
+lingo/edit-link: » edit: 

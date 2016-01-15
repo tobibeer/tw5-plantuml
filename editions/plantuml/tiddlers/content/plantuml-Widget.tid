@@ -1,0 +1,53 @@
+created: 20160114172323590
+creator: Tobias Beer
+modified: 20160115133248118
+modifier: Tobias Beer
+tags: 
+title: plantuml-Widget
+type: text/vnd.tiddlywiki
+
+Leveraging the core <<x ImageWidget>>, the ''$plantuml'' widget displays images and text representations by:
+
+# encoding a block of plantuml to a url
+# retrieving the image from [[plantuml.com|http://plantuml.com]]
+# embedding the image
+
+! Content and Attributes
+
+Any content of the `<$plantuml>` widget is ignored.
+
+| !Attribute | !Description |
+|>|!~PlantUML Widget Specific Attributes |
+|''source''|required, the plantuml source markup |
+|''output''|optional, any of:<br>» `svg` (default) — embeds a svg<br>» `img` — embeds a png<br>» `txt` — embeds a text representation<br>» `src` — embeds the source in a codeblock|
+|''edit''|optional, if set to `yes` or `true`, turns the image to a clickable link to the [[PlantText.com|http://PlantText.com]] editor<br>» defaults to $:/plugins/tobibeer/plantuml/defaults/edit (<code>{{$:/plugins/tobibeer/plantuml/defaults/edit}}</code>) |
+|>|!Supported Core Image Widget Attributes |
+|''width''|The width of the image |
+|''height''|The height of the image |
+|''tooltip''|The tooltip to be displayed over the image |
+|''alt''|The alternative text to be associated with the image |
+|''class''|CSS classes to be assigned to the `<img>` element |
+
+As for rules concerning ''$image'' widgetattributes, please refer to the <<x ImageWidget "official documentation">>.
+
+!! Basic Example
+
+// Here's how to specify the [[basic wikitext example|plantuml-WikiText]] using the widget directly://
+
+!! Basic Example
+
+<$macrocall $name="`" text="""<$plantuml
+width="300px"
+tooltip="The Real Hunger Games™?"
+source="
+title Vegan Nutrition
+repeat
+while (Hungry?) is (Yes)
+  :Eat Healthy;
+  note right
+    No Animal Products
+    Certainly No Dairy
+  end note
+endwhile (No)
+repeatwhile (Go To Sleep)
+"/>"""/>

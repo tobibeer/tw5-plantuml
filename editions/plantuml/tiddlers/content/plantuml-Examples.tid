@@ -1,0 +1,94 @@
+created: 20160114093243713
+creator: Tobias Beer
+modified: 20160115142922237
+modifier: Tobias Beer
+title: plantuml-Examples
+type: text/vnd.tiddlywiki
+
+!! Sources
+
+# the top-menu on [[PlantUML.com|http://plantuml.com]] provides plenty diagrams variants and examples
+# [[PlantText.com|http://www.planttext.com/planttext]] offers a live editor, able to load examples
+
+@@.note
+''Note:'' All of the below examples use the [[wikitext|plantuml-WikiText]] syntax but could have been equally formulated using the [[widget|plantuml-Widget]].
+@@
+
+!! Basic
+
+<<` """[[plantuml[
+:Me: -left-> (LEFT) 
+:Me: -right-> (RIGHT) 
+:Me: -up-> (UP)
+:Me: -down-> (DOWN)
+]]]""">>
+
+!! Tooltip
+
+<<` """[[plantuml tooltip="Is this a nice UI or what?" [
+@startsalt
+{
+  User Name:| "Joe Blogs  "
+  Password: | "****       "
+  [Ok    ]  | [  Close   ]
+}
+@endsalt]]]""">>
+
+!! Text Output
+
+// Specifying `txt` output with a custom height, defaults to [[400px|plantuml-Styles]] for iframed text://
+
+<<` """[[plantuml output="txt" height="130px" tooltip="a class diagram" [
+class Dwelling {
+  +Int Windows
+  +void Lock()
+}
+]]]""">>
+
+!! Custom Class
+
+//Uses the class pretty for a nice drop-shadow://
+
+<<` """[[plantuml class="pretty" [
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
+]]]""">>
+
+!! Custom Width
+
+//Using the width attribute, a pretty class and the <<x LinkWidget>> to create a thumbnail://
+
+<<` """<$link to="plantuml" tooltip="open docs">
+[[plantuml width=64 class=pretty [
+Employee -up-|> User
+Client -up-|> User
+Supervisor -up-|> User
+Employee --> (Login)
+Supervisor --> (Login)
+Client ..> (Login) : NO!!!!
+Supervisor --> (Create / Delete User): I am god
+]]]
+</$link>""">>
+
+!! Source Output
+
+// Setting the ''output'' attribute to `src` returns the specified markup in a codeblock://
+
+<<` """[[plantuml class="pretty" output="src" [
+@startuml
+
+title "Messages - Sequence Diagram"
+
+actor User
+boundary "Web GUI" as GUI
+control "Shopping Cart" as SC
+entity Widget
+database Widgets
+
+User -> GUI : To boundary
+GUI -> SC : To control
+SC -> Widget : To entity
+Widget -> Widgets : To database
+
+@enduml
+]]]""">>

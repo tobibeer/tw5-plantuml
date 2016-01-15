@@ -1,0 +1,28 @@
+created: 20160115133641747
+creator: Tobias Beer
+modified: 20160115134247755
+modifier: Tobias Beer
+tags: 
+title: plantuml-Configure
+type: text/vnd.tiddlywiki
+
+\define default()
+<dt>$(defaults)$$(option)$</dt>
+<dd>
+//{{$:/plugins/tobibeer/plantuml/lingo/$(option)$}}<$list
+filter="[[$(option)$]prefix[template]]">
+{{$(defaults)$$(option)$}}</$list>://<br>
+<$edit-text tag=input tiddler="$(defaults)$$(option)$"/>
+</dd>
+\end
+
+You can set these global defaults / fallbacks:
+
+<dl class="plantuml-defaults">
+<$vars defaults="$:/plugins/tobibeer/plantuml/defaults/">
+<$list filter="[all[tiddlers+shadows]removeprefix<defaults>sort[title]]" variable="option">
+<<default>>
+</$list>
+</$vars>
+</dl>
+<style>.plantuml-defaults input {width:90%;}</style>

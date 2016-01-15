@@ -1,0 +1,39 @@
+created: 20160114110932683
+creator: Tobias Beer
+modified: 20160114180728662
+modifier: Tobias Beer
+title: plantuml-WikiText
+type: text/vnd.tiddlywiki
+
+The wikirule parser for ''plantuml'' allows to use the very same attribute syntax as is allowed for core images all the way from:
+
+```
+[[plantuml[<plantuml code>]]]
+```
+
+to:
+
+```
+[[plantuml width={{!!mywidth}} class=<<image-classes>> [
+<plantuml code>
+]]]
+```
+
+@@.note
+''Note:'' Please refer to the [[widget documentation|plantuml-Widget]] for allowed attributes as well as the core documentation at <<x "Images in WikiText">> for the image attribute syntax.
+@@
+
+!! Basic Example
+
+<$macrocall $name="`" text="""[[plantuml width="300px" tooltip="The Real Hunger Games™?" [
+title Vegan Nutrition
+repeat
+while (Hungry?) is (Yes)
+  :Eat Healthy;
+  note right
+    No Animal Products
+    Certainly No Dairy
+  end note
+endwhile (No)
+repeatwhile (Go To Sleep)
+]]]"""/>

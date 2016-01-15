@@ -1,0 +1,50 @@
+created: 20160114110923453
+creator: Tobias Beer
+modified: 20160115144855283
+modifier: Tobias Beer
+title: plantuml-Info
+type: text/vnd.tiddlywiki
+
+{{plantuml-BETA}}
+
+The plugin $:/plugins/tobibeer/plantuml provides:
+
+; `<$plantuml source="""plantuml code here"""/>`
+: a [[widget|plantuml-Widget]] to render [[PlantUML|http://plantuml.com]] diagrams __online__ as either image or text
+:: retrieving the image from the [[plantuml.com|http://plantuml.com]] server
+::: based on an encoded uri generated from the given plantuml markup
+; `[[plantuml[<plantuml code here>]]]`
+: a [[wikitext|plantuml-WikiText]] markup instantiating the above plantuml [[widget|plantuml-Widget]]
+: implements all of the core <<x "Images in WikiText" "image attributes">> for its [[wikitext syntax|plantuml-WikiText]]
+:: as well as other [[plantuml widget|plantuml-Widget]] specific attributes
+
+<$link to="plantuml-Examples" tooltip="more examples">
+[[plantuml[
+:Hello World;
+note right
+    We will have a lot of:
+    * Fun
+    * More Fun
+    * Endless Fun
+end note
+]]]
+</$link>
+
+@@.note
+''Important:'' To function, this plugin requires you to be online since all representations are retrieved from [ext[plantuml.com|http://plantuml.com]]!
+@@
+
+!!Sources
+
+; [[PlantUML.com|http://plantuml.com]]
+: official [[plantuml]] website and server
+:: form which the generated images and text representations are retrieved
+: providing basic reference instructions for [[implementing plantuml in JavaScript|http://plantuml.com/codejavascript.html]]
+; [[PlantText.com|http://www.planttext.com/planttext]]
+: [[plantuml]] online editor and demos
+:: its editor is the one linked at when using the ''edit'' attribute of the [[widget|plantuml-Widget]]
+:: output links to: `png`, `svg`, `txt`, `edit` (loads the editor)
+; [[anibalch/tiddlywiki-plantuml|https://github.com/anibalch/tiddlywiki-plantuml]]
+: a [[plantuml]] plugin for [[TiddlyWiki Classic|http://classic.tiddlywiki.com]]
+
+<<plugin-docs-cp plantuml>>
