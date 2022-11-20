@@ -75,6 +75,20 @@ PlantUMLWidget.prototype.render = function(parent,nextSibling) {
 			// Add to output
 			nodes.push(node);
 			break;
+		// Embed svg to be able to click links
+		case "svg":
+			// Create codeblock
+			node.type = "element";
+			node.tag = "embed";
+			// Set embedded source
+			node.attributes.src = {
+				type:"string",
+				// Encoding the source attribute depending on the specified type, e.g. svg or img
+				value:$tw.utils.plantuml.encodePlantUML(this.source,this.output)
+			};
+			// Add to output
+			nodes.push(node);
+			break;
 		// Render plantuml as text
 		case "txt":
 			// Create iframe
