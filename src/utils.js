@@ -28,9 +28,10 @@ encodePlantUML: function(src, type) {
 			// Do editing?
 			type === "edit" ?
 			// Take edit url
-			"http://www.planttext.com/planttext?text=" :
+
+		  $tw.wiki.getTextReference("$:/plugins/tobibeer/plantuml/edit-url") :
 			// Viewing?
-			"http://www.plantuml.com/plantuml/" + type + "/"
+		  $tw.wiki.getTextReference("$:/plugins/tobibeer/plantuml/server-url") + type + "/"
 		) +
 			// Encode the...
 			this.encode64(
