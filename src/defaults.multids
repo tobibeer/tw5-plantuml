@@ -3,3 +3,5 @@ title: $:/plugins/tobibeer/plantuml/
 defaults/edit: true
 lingo/edit: globally enable edit links for all output ("yes" or "true")
 lingo/edit-link: » edit: 
+edit-url: http://www.planttext.com/planttext?text=
+server-url: http://www.plantuml.com/plantuml/
